@@ -13,8 +13,25 @@
   </div>
 </div>
 <div class="modal">
-  <p>Налоговый вычет</p>
-  <p>Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового вычета составляет не более 13% от своего официального годового дохода.</p>
+  <div class="modal__wrapper">
+  <a href="#" class="modal__close"></a>
+  <h3>Налоговый вычет</h3>
+  <p class="modal__description">Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового вычета составляет не более 13% от своего официального годового дохода.</p>
+  <form class="tax-form">
+    <label for="inp">Ваша зарплата в месяц</label>
+    <input type="text" name="inp" class="tax-form__input" placeholder="Введите данные" required>
+    
+    <input type="submit" class="tax-form__calculate" value="Рассчитать">
+    <div class="form-controls">
+      <span>Что уменьшаем?</span>
+      <button type="button" class="form-controls__tag">Платеж</button>
+      <button type="button" class="form-controls__tag">Срок</button>
+
+    </div>
+    
+  </form>
+  <div class="add-button">Добавить</div>
+</div>
 </div>
 </body>
 </html>
