@@ -4,16 +4,16 @@ const modal = document.querySelector('.modal');
 const close = document.querySelector('.modal__close');
 const form = document.querySelector('.tax-form');
 const inp = document.querySelector('.tax-form__input');
-const addButton = document.querySelector('.add-button')
+const addButton = document.querySelector('.add-button');
 
 window.onbeforeunload = () => {
   form.reset();
 };
 
-let taxCount = function(a) {
-    a = inp.value;
-    return (a*12)*0.13
-}
+const taxCount = function (a) {
+  a = inp.value;
+  return (a * 12) * 0.13;
+};
 
 btn.onclick = () => {
   btn.style.opacity = 0;
@@ -22,10 +22,10 @@ btn.onclick = () => {
 };
 
 close.onclick = () => {
+  form.reset();
+  modal.classList.remove('active');
   btn.style.opacity = 1;
   cont.style.background = '';
-  modal.classList.remove('active');
-  form.reset();
 };
 
 const tags = document.getElementsByClassName('form-controls__tag');
@@ -35,11 +35,11 @@ for (const t of tags) {
   });
 }
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    taxCount();
-    modal.classList.add('calculated');
-    document.querySelector('.form-controls').insertAdjacentHTML('beforebegin', `
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  taxCount();
+  modal.classList.add('calculated');
+  document.querySelector('.form-controls').insertAdjacentHTML('beforebegin', `
     <div class="calculated-box">
     <p>Итого можете внести в качестве досрочных:</p> 
     <ul class="calculated__list">
@@ -60,18 +60,16 @@ form.addEventListener('submit', e => {
       <hr />
       <li class="calculated__list-item">
         <input type="checkbox" class="checkbox" id="cb4">
-        <label for="cb4" class="label"><span>${taxCount()/4} рублей</span><span> в 4-й год</span></label>
+        <label for="cb4" class="label"><span>${taxCount() / 4} рублей</span><span> в 4-й год</span></label>
       </li> 
       <hr />
     </ul>
   </div>
     `);
-
-})
-
+});
 
 addButton.onclick = () => {
-    form.reset();
-    modal.classList.remove('calculated');
-    document.querySelector('.calculated-box').remove()
-}
+  form.reset();
+  modal.classList.remove('calculated');
+  document.querySelector('.calculated-box').remove();
+};

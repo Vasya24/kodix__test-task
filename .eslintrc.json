@@ -16,6 +16,7 @@
             "LabeledStatement",
             "WithStatement"
           ] ,
-          "no-plusplus": "off"     
+          "no-plusplus": "off",
+          "no-param-reassign": "off"
     }
 }

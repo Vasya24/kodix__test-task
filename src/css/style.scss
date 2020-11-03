@@ -10,6 +10,12 @@
     margin: 0;
     padding: 0;
     font-family: LabGrotesque;
+    @media screen and (max-width: 1000px) {
+        font-size: 14px;
+    }
+    @media screen and (max-width: 680px) {
+        font-size: 12px;
+    }
 }
 
 li {
@@ -17,8 +23,8 @@ li {
 }
 
 hr {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: #DFE3E6;
 }
 
@@ -37,10 +43,10 @@ hr {
     align-items: center;
     cursor: pointer;
     position: relative;
-    width: 198px;
+    width: 13.8%;
     height: 56px;
-    left: 43.125%;
-    top: 40.125%;
+    left: 40%;
+    top: 40%;
     color: #fff;
     border: 1px solid #fff;
     box-sizing: border-box;
@@ -52,10 +58,17 @@ hr {
       color: #000;
     }
     span {
-        padding-left: 21%;
+        position: relative;
+        padding-left: 18%;
         font-weight: 500;
     }
-
+    @media screen and (max-width: 1000px){
+        font-size: .75rem;
+    }
+    @media screen and (max-width: 680px) {
+        width: 40%;
+        left: 30%;
+      }
 }
 
 
