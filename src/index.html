@@ -12,25 +12,51 @@
     <span>Налоговый вычет</span>
   </div>
 </div>
-<div class="modal">
+<div class="modal active">
   <div class="modal__wrapper">
   <a href="#" class="modal__close"></a>
   <h3>Налоговый вычет</h3>
   <p class="modal__description">Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового вычета составляет не более 13% от своего официального годового дохода.</p>
   <form class="tax-form">
     <label for="inp">Ваша зарплата в месяц</label>
-    <input type="text" name="inp" class="tax-form__input" placeholder="Введите данные" required>
+    <input type="text" name="inp" class="tax-form__input" pattern="[0-9]+" placeholder="Введите данные" required>
     
     <input type="submit" class="tax-form__calculate" value="Рассчитать">
+
+    <!-- <div class="calculated">
+      <p>Итого можете внести в качестве досрочных:</p> 
+      <ul class="calculated__list">
+        <li class="calculated__list-item">
+          <input type="checkbox" class="checkbox" id="cb1">
+          <label for="cb1" class="label"><span>рублей</span><span> в n-й год</span></label>
+        </li>
+        <hr />
+        <li class="calculated__list-item">
+          <input type="checkbox" class="checkbox" id="cb2">
+          <label for="cb2" class="label"><span>рублей</span><span> в n-й год</span></label>
+        </li>
+        <hr />
+        <li class="calculated__list-item">
+          <input type="checkbox" class="checkbox" id="cb3">
+          <label for="cb3" class="label"><span>рублей</span><span> в n-й год</span></label>
+        </li>
+        <hr />
+        <li class="calculated__list-item">
+          <input type="checkbox" class="checkbox" id="cb4">
+          <label for="cb4" class="label"><span>рублей</span><span> в n-й год</span></label>
+        </li> 
+        <hr />
+      </ul>
+    </div> -->
     <div class="form-controls">
       <span>Что уменьшаем?</span>
       <button type="button" class="form-controls__tag">Платеж</button>
       <button type="button" class="form-controls__tag">Срок</button>
 
     </div>
-    
+    <div class="add-button">Добавить</div>
   </form>
-  <div class="add-button">Добавить</div>
+  
 </div>
 </div>
 </body>

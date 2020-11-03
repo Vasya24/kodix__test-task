@@ -1,0 +1,27 @@
+$grad: linear-gradient(255.35deg, #DC3131 0.83%, #ff4f4f00 108.93%), #FF5E56;
+
+
+input[type=checkbox] {
+    display: none;
+    & + label:before {
+      content: " ";
+      color: #000;
+      display: inline-block;
+      margin-right: 15px;
+      position: relative;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      background: #FFFFFF;
+      border: 1px solid #DFE3E6;
+      border-radius: 6px;
+      box-sizing: border-box;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    &:checked + label:before {
+      content: '✓';
+      color: #fff;
+      background: $grad;
+    }
+  }

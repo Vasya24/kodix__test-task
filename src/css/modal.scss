@@ -3,14 +3,24 @@ $grad: linear-gradient(255.35deg, #DC3131 0.83%, #ff4f4f00 108.93%), #FF5E56;
 .modal {
     position: absolute;
     width: 552px;
-    height: 476px;
-    left: 444px;
-    top: 120px;
+    height: 55vh;
+    left: 486px;
+    top: -1000px;
     background: #FFFFFF;
     border-radius: 30px;
-
+    transition: top .5s linear;
+    &.active {
+        top: 60px;
+        &.calculated {
+          height: 85vh;
+          top: 60px;
+        }
+    }
+    
     &__wrapper {
         position: relative;
+        display: flex;
+        flex-direction: column;
         padding: 5.8%;
     }
 
@@ -67,6 +77,10 @@ $grad: linear-gradient(255.35deg, #DC3131 0.83%, #ff4f4f00 108.93%), #FF5E56;
             border: 1px solid #DFE3E6;
             box-sizing: border-box;
             border-radius: 3px;
+            &:hover {
+              border: 1px solid #000;
+            }
+
         }
 
     
@@ -81,6 +95,16 @@ $grad: linear-gradient(255.35deg, #DC3131 0.83%, #ff4f4f00 108.93%), #FF5E56;
       cursor: pointer;
       background: none;
       border: none;
+      &:hover {
+        color: #F53A31;
+      }
+  }
+  .calculated {
+    position: relative;
+    top: 16px;
+    // &__list-item {
+    //   border-bottom: 1px solid gray
+    // }
   }
 }
   .form-controls {
@@ -102,7 +126,10 @@ $grad: linear-gradient(255.35deg, #DC3131 0.83%, #ff4f4f00 108.93%), #FF5E56;
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.5rem;
-    & .active {
+    &:hover {
+        background-color:  #DFE3E6;
+    }
+    &.active {
         background: $grad;
         color: #fff;
         border-color: #DC3131;
@@ -116,11 +143,11 @@ $grad: linear-gradient(255.35deg, #DC3131 0.83%, #ff4f4f00 108.93%), #FF5E56;
 }
 
 .add-button {
-    position: absolute;
+    position: relative;
     width: 90%;
     height: 56px;
     left: 32px;
-    top: 388px;
+    top: 48px;
     text-align: center;
     line-height: 56px;
     background: $grad;
@@ -128,4 +155,8 @@ $grad: linear-gradient(255.35deg, #DC3131 0.83%, #ff4f4f00 108.93%), #FF5E56;
     border-radius: 6px;
     color: #fff;
     cursor: pointer;
+    &:hover {
+      background:  #EA0029;
+    }
 }
+
